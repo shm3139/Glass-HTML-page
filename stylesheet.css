@@ -1,0 +1,167 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+main{
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	/*means it should take up the full size of the monitor*/
+	background: linear-gradient(to right top, #F3D3EC, #F5A8E5);
+	/*from bottom to up, two different shades of pink*/
+	display: flex;
+	/*bottom two won't work unless you flex everything*/
+	align-items: center;
+	/*to align items to the center, vertically*/
+	justify-content: center;
+	/*horizontally*/
+}
+
+.glass{
+	background: white;
+	min-height: 80vh;
+	/*will take 80% of the screen */
+	width: 60%;
+	/*don't want it to be stretched all the way out*/
+	background: linear-gradient(to right bottom, 
+		rgba(255,255,255,0.7), 
+		rgba(255,255,255,0.3));
+	/*0.7 and 0.3 are opacity*/
+	border-radius: 2rem; 
+	/*curves the border*/
+	z-index: 2;
+	/*moves the glass in front of the circles, the bigger the number, the more 
+	forward (opaque) it is*/
+	backdrop-filter: blur(2rem);
+	/*for blur effect*/
+	display: flex;
+	/*aligns everything vertically, pic and options contents*/
+
+}
+
+.circle1,.circle2{
+	background: white;
+	background: linear-gradient(to right bottom, 
+		rgba(255,255,255,0.8), 
+		rgba(255,255,255,0.3));
+	height: 20rem;
+	width: 20rem;
+	position: absolute;
+	/*when it is absolute, you can move the circles wherever you want*/
+	/*top:5%;
+	left:10%;*/
+	/*problem: both circle 1 and circle 2 are in this position*/
+	border-radius: 50%;
+	/*turning them into circles*/
+}
+
+.circle1{
+	top:5%;
+	right:10%;
+
+}
+
+.circle2{
+	bottom: 5%;
+	left: 10%;
+}
+
+.dashboard{
+	flex:1;
+	/*flex in both dashboard and games class splits the dashboard in two*/
+	display: flex;
+	flex-direction: column;
+	/*we do this otherwise we cannot use align item and justify content*/
+	align-items: center;
+	justify-content:space-evenly;
+	text-align: center;
+	background: linear-gradient(to right bottom, 
+		rgba(255,255,255,0.7), 
+		rgba(255,255,255,0.3));
+	border-radius: 2rem;
+}
+
+.pictures{
+	margin: 5rem;
+	flex:2;
+	/*expands so that the pictures section cover 2/3 of dashboard*/
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.link{
+	display: flex;
+	margin: 2rem 0rem;
+	padding: 1rem 5rem;
+	align-items: center;
+}
+
+.link h2{
+	padding: 0rem 2rem;
+}
+
+.userpic{
+	border-radius: 50%;
+	height: 10rem;
+	width: 8rem;
+}
+
+h1
+{
+	color: #426696;
+	font-weight: 600;
+	font-size: 3rem;
+	opacity: 0.8;
+}
+
+h2, p{
+	color:#658ec6;
+	font-weight: 500;
+	opacity: 0.8;
+}
+
+h3{
+	color: #426696;
+	font-weight: 600;
+	font-size: 3rem;
+	opacity: 0.8;
+}
+
+.pic{
+	border-radius: 2rem
+}
+
+.status{
+	margin-bottom: 3rem;
+}
+
+.status input{
+	background: linear-gradient(to right bottom, 
+		rgba(255,255,255,0.7), 
+		rgba(255,255,255,0.3));
+	border: none;
+	width: 80%;
+	padding: 0.5rem;
+	border-radius: 2rem;
+}
+
+.card{
+  	background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5));
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0212);
+    /*6px represent xy position, 20px is amount of blur*/
+    /*rgba greyish colour*/
+    justify-content: space-between;
+}
+
+.card-info{
+	display: flex;
+	flex-direction: column;
+}
